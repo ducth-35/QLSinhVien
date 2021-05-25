@@ -46,6 +46,8 @@ public class SinhvienDAO {
                 sv.setGioiTinh(svNew.isGioiTinh());
                 sv.setHinhAnh(svNew.getHinhAnh());
                 sv.setNgaySinh(svNew.getNgaySinh());
+                sv.setEmail(svNew.getEmail());
+                sv.setSđt(svNew.getSđt());
                 sv.setTenSV(svNew.getTenSV());
                 return  1;
             }

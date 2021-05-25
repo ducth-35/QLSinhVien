@@ -17,6 +17,8 @@ public class Sinhvien {
     private Date ngaySinh;
     private boolean gioiTinh;
     private String diaChi;
+    private String sđt;
+    private String email;
     private String hinhAnh;
 
     public Sinhvien() {
@@ -26,13 +28,15 @@ public class Sinhvien {
         this.maSV = maSV;
         this.tenSV = tenSV;
     }
-    
-    public Sinhvien(String maSV, String tenSV, Date ngaySinh, boolean gioiTinh, String diaChi, String hinhAnh) {
+
+    public Sinhvien(String maSV, String tenSV, Date ngaySinh, boolean gioiTinh, String diaChi, String sđt, String email, String hinhAnh) {
         this.maSV = maSV;
         this.tenSV = tenSV;
         this.ngaySinh = ngaySinh;
         this.gioiTinh = gioiTinh;
         this.diaChi = diaChi;
+        this.sđt = sđt;
+        this.email = email;
         this.hinhAnh = hinhAnh;
     }
 
@@ -76,6 +80,22 @@ public class Sinhvien {
         this.diaChi = diaChi;
     }
 
+    public String getSđt() {
+        return sđt;
+    }
+
+    public void setSđt(String sđt) {
+        this.sđt = sđt;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getHinhAnh() {
         return hinhAnh;
     }
@@ -83,4 +103,7 @@ public class Sinhvien {
     public void setHinhAnh(String hinhAnh) {
         this.hinhAnh = hinhAnh;
     }
+    
+  
+   
 }
