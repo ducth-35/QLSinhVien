@@ -14,6 +14,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -25,6 +27,9 @@ import javax.swing.table.DefaultTableModel;
  * @author Other
  */
 public class QuanlysinhvienDialog extends javax.swing.JDialog {
+
+    private Pattern pattern;
+    private Matcher matcher;
 
     SimpleDateFormat date_format = new SimpleDateFormat("dd/MM/yyyy");
     SinhvienDAO dao = new SinhvienDAO();
@@ -452,10 +457,8 @@ public class QuanlysinhvienDialog extends javax.swing.JDialog {
             } catch (ParseException ex) {
                 Logger.getLogger(QuanlysinhvienDialog.class.getName());
             }
-        } else if(validateEmail()) {
-              JOptionPane.showMessageDialog(this, "Không được để trống Email !");
         } else {
-            JOptionPane.showMessageDialog(this, "Bạn chưa nhập thông tin");
+              JOptionPane.showMessageDialog(this, " Bạn chưa nhập thông tin !");
         }
     }//GEN-LAST:event_btnSuaActionPerformed
 
@@ -465,13 +468,6 @@ public class QuanlysinhvienDialog extends javax.swing.JDialog {
         }
         return true;
     }
-    public boolean validateEmail(){
-       String email =  "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
-        if (txtEmail.getText().isEmpty()) {
-            return false;
-        }
-        return true;
-    } 
 
     public Sinhvien getModel() throws ParseException {
         Sinhvien sv = new Sinhvien();
@@ -506,7 +502,7 @@ public class QuanlysinhvienDialog extends javax.swing.JDialog {
                 Logger.getLogger(QuanlysinhvienDialog.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
-            JOptionPane.showMessageDialog(this, " Bạn chưa nhập đầy đủ thông tin ! ");
+         JOptionPane.showMessageDialog(this, "Bạn chưa nhập thông tin !");
         }
     }//GEN-LAST:event_btnLuuActionPerformed
 
