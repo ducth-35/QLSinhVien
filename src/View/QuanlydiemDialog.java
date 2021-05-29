@@ -586,6 +586,10 @@ public class QuanlydiemDialog extends javax.swing.JDialog {
         if (txtMaSVTK.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Bạn chưa nhập mã sinh viên !");
         } else {
+            Boolean sinhvien = svDAO.hasSinhVienByID(txtMaSVTK.getText());
+            if (sinhvien != null) {
+                JOptionPane.showMessageDialog(this, " Không tìm thấy mã sinh viên !");
+            }
             Sinhvien sv = svDAO.getSinhVienByID(txtMaSVTK.getText());
             if (sv != null) {
                 Diem d = diemDAO.getOneDiemByMaSV(sv.getMaSV());
@@ -595,13 +599,14 @@ public class QuanlydiemDialog extends javax.swing.JDialog {
                     // Set thông tin và điểm lên form, nếu chưa có điểm thì để mặc định là 0
                     txtMaSv.setText(sv.getMaSV());
                     txtHoTen.setText(sv.getTenSV());
-                    txtTiengAnh.setText("0");
-                    txtTinHoc.setText("0");
-                    txtTheChat.setText("0");
+                    txtTiengAnh.setText("Chưa có điểm");
+                    txtTinHoc.setText("Chưa có điểm");
+                    txtTheChat.setText("Chưa có điểm");
                     txtDiemTB.setText("0.0");
                 }
             }
         }
+
     }//GEN-LAST:event_btnTimKiemActionPerformed
 
     /**

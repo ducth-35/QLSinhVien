@@ -39,6 +39,15 @@ public class SinhvienDAO {
         }
         return  null;
     }
+    
+    public Boolean hasSinhVienByID(String id){
+        for (Sinhvien sv : list){
+            if(sv.getMaSV().equalsIgnoreCase(id)){
+                return true;
+            }
+        }
+        return  false;
+    }
     public int updateSinhVienByID(Sinhvien svNew){
         for(Sinhvien sv: list){
             if(sv.getMaSV().equalsIgnoreCase(svNew.getMaSV())){
