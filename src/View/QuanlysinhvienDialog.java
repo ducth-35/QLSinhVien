@@ -42,6 +42,7 @@ public class QuanlysinhvienDialog extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(null);
+        setTitle("Quản lý nhân sự");
     }
 
     public void fillDataTABLE() {
@@ -121,7 +122,7 @@ public class QuanlysinhvienDialog extends javax.swing.JDialog {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel1.setText("QUẢN LÝ SINH VIÊN");
+        jLabel1.setText("QUẢN LÝ NHÂN SỰ");
 
         btnThem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Refresh.png"))); // NOI18N
         btnThem.setText("Refresh");
@@ -336,7 +337,7 @@ public class QuanlysinhvienDialog extends javax.swing.JDialog {
         lbHinhanh.setForeground(new java.awt.Color(102, 102, 102));
         lbHinhanh.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbHinhanh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Open folder.png"))); // NOI18N
-        lbHinhanh.setText("Nhấn để chọn hình ảnh");
+        lbHinhanh.setText("Chọn ảnh");
         lbHinhanh.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 204, 51)));
         lbHinhanh.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
