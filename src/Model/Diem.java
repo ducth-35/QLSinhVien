@@ -13,7 +13,7 @@ public class Diem {
 
     private int id;
     private Sinhvien sv;
-    private double tienganh, tinhoc, gdtc;
+    private Double tienganh, tinhoc, gdtc;
 
     public Diem() {
     }
